@@ -1,4 +1,4 @@
-package lesson_4;
+package lesson_4.car;
 
 /**
  * Created by linhnm on September, 2021

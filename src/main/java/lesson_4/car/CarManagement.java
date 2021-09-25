@@ -1,4 +1,4 @@
-package lesson_4;
+package lesson_4.car;
 
 import java.io.FileInputStream;
 import java.io.IOException;
