@@ -1,0 +1,8 @@
+C01 | Nguyễn Mạnh Hải | A| Nam | 1998 | 1
+C02 | Chu Quang Minh | C | Nam | 1994 | 0
+C03 | Nguyễn Mạnh Hải | A| Nam | 1994 | 1
+C04 | Chu Quang Minh | C | Nam | 1922 | 0
+C05 | Nguyễn Mạnh Hải | A| Nam | 1992 | 1
+C06 | Chu Quang Minh | C | Nam | 1922 | 0
+C07 | Nguyễn Mạnh Hải | A| Nam | 1994 | 1
+C08 | Chu Quang Minh | C | Nam | 1992 | 0
