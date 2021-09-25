@@ -1,4 +1,4 @@
-package lesion_3;
+package lesion_3.candidate;
 
 import java.io.FileInputStream;
 import java.io.IOException;

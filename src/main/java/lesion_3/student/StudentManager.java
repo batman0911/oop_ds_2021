@@ -1,4 +1,4 @@
-package lesion_3;
+package lesion_3.student;
 
 import java.util.Scanner;
 

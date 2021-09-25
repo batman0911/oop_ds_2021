@@ -1,4 +1,4 @@
-package lesion_3;
+package lesion_3.computer;
 
 /**
  * Created by linhnm on September, 2021
