@@ -3,6 +3,7 @@ package lesson_4;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
@@ -72,15 +73,36 @@ public class CarManagement {
     // Phương thức xuất ra danh sách những xe giá thành tiền (amount) cao nhất thuộc loại typeOfCars
 
     public ArrayList<Car> getMaxAmount(ArrayList<Car> cars, String typeOfCars){
+        ArrayList<Car> carByType = cars
+                .stream()
+                .filter(car -> {
+                    if (typeOfCars.equals("ServiceCar")) {
+                        return car instanceof ServiceCar;
+                    } else if (typeOfCars.equals("SportCar")) {
+                        return car instanceof SportCar;
+                    }
+                    return true;
+                })
+                .collect(Collectors.toCollection(ArrayList::new));
+        ArrayList<Car> maxAmountCarList = new ArrayList<>();
+        double max = carByType.get(0).getAmount();
+        maxAmountCarList.add(carByType.get(0));
+        for (Car car : carByType) {
+            if (car.getAmount() > max) {
+                max = car.getAmount();
+                maxAmountCarList.clear();
+                maxAmountCarList.add(car);
+            }
+        }
 
-        return null;
+        return maxAmountCarList;
 
     }
 
     // Phướng thức sắp xếp giá thành tiền các loại xe theo thứ tự giảm dần
     public void sortByAmount(ArrayList<Car> cars){
         //Begin editable part
-
+        cars.sort(Collections.reverseOrder((car1, car2) -> (int) (car1.getAmount() - car2.getAmount())));
     }
 
     // Hàm main
@@ -91,6 +113,7 @@ public class CarManagement {
 
         for (int i = 0; i < cars.size(); i++) {
             System.out.print(cars.get(i).getAmount() + " ");
+//            System.out.println(cars.get(i).toString());
         }
         System.out.println();
         ArrayList<Car> carsList = carManag.findCars(cars,"honda");

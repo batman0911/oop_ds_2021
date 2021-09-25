@@ -23,7 +23,7 @@ public class SportCar extends Car {
     // Hoàn thiện phương thức getAmount() trả về giá thành tiền trong lớp SportCar
     @Override
     public double getAmount() {
-        return super.getPrice() + super.getHours() + (super.getPrice() + super.getHours()) * this.tax / 100.0;
+        return super.getPrice() * super.getHours() + (super.getPrice() * super.getHours()) * this.tax / 100.0;
     }
 
     @Override
