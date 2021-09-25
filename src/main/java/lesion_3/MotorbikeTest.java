@@ -75,7 +75,8 @@ public class MotorbikeTest {
         int n = Integer.parseInt(scanner.nextLine());
         ArrayList<Motorbike> motorbikes = new ArrayList<>();
         inputMotorbike(scanner, motorbikes, n);
-        switch (n) {
+        int c = Integer.parseInt(scanner.nextLine());
+        switch (c) {
             case 1:
                 ouputMotorbike(search("Honda", motorbikes));
                 break;
